@@ -5,6 +5,7 @@ import { Soporte } from "../pages/Soporte";
 import { Usuarios } from "../pages/Usuarios";
 import { AdminLogin } from "../pages/AdminLogin";
 import "../css/App.css"
+import { Respuesta } from "../pages/Respuesta";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<AdminLogin />} />
                     <Route path="/soporte" element={<Soporte />} />
+                    <Route path="/respuesta" element={<Respuesta />} />
                     <Route path="/usuarios" element={<Usuarios />} />
                 </Routes>
             </GeneralProvider>

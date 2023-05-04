@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/Soporte.scss";
 import img12 from "../assets/imgs/img12.png";
@@ -6,7 +6,8 @@ import img12 from "../assets/imgs/img12.png";
 function Soporte() {
   const navigate = useNavigate();
   let filaSeleccionada = null;
-  const filas = document.querySelectorAll("tr");
+  useEffect(() => {
+    const filas = document.querySelectorAll("tr");
 
   filas.forEach(function (fila) {
     fila.addEventListener("click", function () {
@@ -17,8 +18,9 @@ function Soporte() {
       filaSeleccionada = fila;
     });
   });
+  }, []);
   return (
-    <React.Fragment>
+    <div id="soporte">
       <header>
         <nav>
           <ul>
@@ -26,7 +28,7 @@ function Soporte() {
               <a href="#">Soporte</a>
             </li>
             <li>
-              <a onClick={()=>navigate("/usuarios")}>Usuarios</a>
+              <a onClick={() => navigate("/usuarios")}>Usuarios</a>
             </li>
           </ul>
         </nav>
@@ -45,7 +47,7 @@ function Soporte() {
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr onClick={()=>{}}>
                 <td>
                   <img src={img12} />
                 </td>
@@ -121,12 +123,12 @@ function Soporte() {
 
         <div class="btns">
           <input type="button" value="Eliminar" class="btn btn-grey"></input>
-          <input type="button" value="Responder" class="btn btn-orange"></input>
+          <input type="button" value="Responder" class="btn btn-orange" onClick={()=>navigate("/respuesta")}></input>
         </div>
 
-        <footer style={{"fontSize": "small"}}>Mateo Reinoso</footer>
+        <footer style={{ fontSize: "small" }}>Mateo Reinoso</footer>
       </section>
-    </React.Fragment>
+    </div>
   );
 }
 
