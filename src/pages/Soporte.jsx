@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/Soporte.scss";
