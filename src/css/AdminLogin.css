@@ -52,9 +52,11 @@
     background-position: 5px 0px;
     padding-left: 25px;
 }
-#admin-login--page .admin-login--container button{
+#admin-login--page .admin-login--container form p{
     width: 100%;
-    padding: 10px 20px;
+    text-align: center;
+    align-self: center;
+    padding: 5px 20px;
     border-radius: 20px;
     border: none;
     color: white;
